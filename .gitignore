@@ -1,0 +1,13 @@
+# Python virtual environment
+venv/
+
+# Cached market data (too large, re-downloadable)
+data/
+
+# Log files (generated fresh each run)
+logs/
+
+# Python cache files
+__pycache__/
+*.pyc
+.DS_Store
