@@ -5,3 +5,5 @@ logs/
 __pycache__/
 *.pyc
 .DS_Store
+src/__pycache__/
+src/features/__pycache__/
