@@ -587,5 +587,545 @@
       "aapl",
       "ai-generated"
     ]
+  },
+  {
+    "id": "EXP-3A2E53",
+    "timestamp": "2026-06-28T22:26:12.116191",
+    "hypothesis": "Does the momentum_7 feature set show predictive edge on AAPL over the test period 2024-2026?",
+    "ticker": "AAPL",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "momentum_7",
+      "n_features": 7,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.5403,
+      "Sharpe": 0.153,
+      "Top Feature": "mom_rsi_14",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.5403 on AAPL using 7 features. Top feature: mom_rsi_14.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "momentum_7",
+      "aapl"
+    ]
+  },
+  {
+    "id": "EXP-36086A",
+    "timestamp": "2026-06-28T22:26:12.117262",
+    "hypothesis": "Does the top5_selected feature set show predictive edge on AAPL over the test period 2024-2026?",
+    "ticker": "AAPL",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "top5_selected",
+      "n_features": 5,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "trend_dist_sma50",
+      "vol_volume_momentum",
+      "mom_return_60d",
+      "mom_return_10d",
+      "mom_return_20d"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.5116,
+      "Sharpe": -1.374,
+      "Top Feature": "mom_return_20d",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.5116 on AAPL using 5 features. Top feature: mom_return_20d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "top5_selected",
+      "aapl"
+    ]
+  },
+  {
+    "id": "EXP-C0429B",
+    "timestamp": "2026-06-28T22:26:12.118718",
+    "hypothesis": "Does the full_27 feature set show predictive edge on AAPL over the test period 2024-2026?",
+    "ticker": "AAPL",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "full_27",
+      "n_features": 27,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14",
+      "vol_atr_14",
+      "vol_atr_pct",
+      "vol_realized_10d",
+      "vol_realized_20d",
+      "vol_rank_52w",
+      "vol_ratio",
+      "trend_dist_sma20",
+      "trend_dist_sma50",
+      "trend_dist_sma200",
+      "trend_dist_ema20",
+      "trend_sma20_slope",
+      "trend_above_sma200",
+      "vol_relative_volume",
+      "vol_volume_spike",
+      "vol_price_volume_trend",
+      "vol_volume_momentum",
+      "regime_bull_bear",
+      "regime_volatility_state",
+      "regime_trend_strength",
+      "regime_drawdown_pct"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.4782,
+      "Sharpe": -1.915,
+      "Top Feature": "trend_dist_sma50",
+      "Train Rows": 482,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.4782 on AAPL using 27 features. Top feature: trend_dist_sma50.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "full_27",
+      "aapl"
+    ]
+  },
+  {
+    "id": "EXP-62C052",
+    "timestamp": "2026-06-28T22:26:12.119283",
+    "hypothesis": "Does the momentum_7 feature set show predictive edge on NVDA over the test period 2024-2026?",
+    "ticker": "NVDA",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "momentum_7",
+      "n_features": 7,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.4816,
+      "Sharpe": 6.314,
+      "Top Feature": "mom_return_1d",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.4816 on NVDA using 7 features. Top feature: mom_return_1d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "momentum_7",
+      "nvda"
+    ]
+  },
+  {
+    "id": "EXP-920B89",
+    "timestamp": "2026-06-28T22:26:12.119845",
+    "hypothesis": "Does the top5_selected feature set show predictive edge on NVDA over the test period 2024-2026?",
+    "ticker": "NVDA",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "top5_selected",
+      "n_features": 5,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "trend_dist_sma50",
+      "vol_volume_momentum",
+      "mom_return_60d",
+      "mom_return_10d",
+      "mom_return_20d"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.4572,
+      "Sharpe": -0.143,
+      "Top Feature": "trend_dist_sma50",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.4572 on NVDA using 5 features. Top feature: trend_dist_sma50.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "top5_selected",
+      "nvda"
+    ]
+  },
+  {
+    "id": "EXP-224BB2",
+    "timestamp": "2026-06-28T22:26:12.120424",
+    "hypothesis": "Does the full_27 feature set show predictive edge on NVDA over the test period 2024-2026?",
+    "ticker": "NVDA",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "full_27",
+      "n_features": 27,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14",
+      "vol_atr_14",
+      "vol_atr_pct",
+      "vol_realized_10d",
+      "vol_realized_20d",
+      "vol_rank_52w",
+      "vol_ratio",
+      "trend_dist_sma20",
+      "trend_dist_sma50",
+      "trend_dist_sma200",
+      "trend_dist_ema20",
+      "trend_sma20_slope",
+      "trend_above_sma200",
+      "vol_relative_volume",
+      "vol_volume_spike",
+      "vol_price_volume_trend",
+      "vol_volume_momentum",
+      "regime_bull_bear",
+      "regime_volatility_state",
+      "regime_trend_strength",
+      "regime_drawdown_pct"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.493,
+      "Sharpe": 2.311,
+      "Top Feature": "mom_return_1d",
+      "Train Rows": 482,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.4930 on NVDA using 27 features. Top feature: mom_return_1d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "full_27",
+      "nvda"
+    ]
+  },
+  {
+    "id": "EXP-CA6831",
+    "timestamp": "2026-06-28T22:26:12.121876",
+    "hypothesis": "Does the momentum_7 feature set show predictive edge on SPY over the test period 2024-2026?",
+    "ticker": "SPY",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "momentum_7",
+      "n_features": 7,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.4831,
+      "Sharpe": 1.581,
+      "Top Feature": "mom_return_1d",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.4831 on SPY using 7 features. Top feature: mom_return_1d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "momentum_7",
+      "spy"
+    ]
+  },
+  {
+    "id": "EXP-A2FBAB",
+    "timestamp": "2026-06-28T22:26:12.122590",
+    "hypothesis": "Does the top5_selected feature set show predictive edge on SPY over the test period 2024-2026?",
+    "ticker": "SPY",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "top5_selected",
+      "n_features": 5,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "trend_dist_sma50",
+      "vol_volume_momentum",
+      "mom_return_60d",
+      "mom_return_10d",
+      "mom_return_20d"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.5293,
+      "Sharpe": 0.101,
+      "Top Feature": "mom_return_20d",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.5293 on SPY using 5 features. Top feature: mom_return_20d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "top5_selected",
+      "spy"
+    ]
+  },
+  {
+    "id": "EXP-834AC8",
+    "timestamp": "2026-06-28T22:26:12.123287",
+    "hypothesis": "Does the full_27 feature set show predictive edge on SPY over the test period 2024-2026?",
+    "ticker": "SPY",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "full_27",
+      "n_features": 27,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14",
+      "vol_atr_14",
+      "vol_atr_pct",
+      "vol_realized_10d",
+      "vol_realized_20d",
+      "vol_rank_52w",
+      "vol_ratio",
+      "trend_dist_sma20",
+      "trend_dist_sma50",
+      "trend_dist_sma200",
+      "trend_dist_ema20",
+      "trend_sma20_slope",
+      "trend_above_sma200",
+      "vol_relative_volume",
+      "vol_volume_spike",
+      "vol_price_volume_trend",
+      "vol_volume_momentum",
+      "regime_bull_bear",
+      "regime_volatility_state",
+      "regime_trend_strength",
+      "regime_drawdown_pct"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.4765,
+      "Sharpe": 2.997,
+      "Top Feature": "mom_return_1d",
+      "Train Rows": 482,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.4765 on SPY using 27 features. Top feature: mom_return_1d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "full_27",
+      "spy"
+    ]
+  },
+  {
+    "id": "EXP-3983B3",
+    "timestamp": "2026-06-28T22:26:12.124209",
+    "hypothesis": "Does the momentum_7 feature set show predictive edge on XOM over the test period 2024-2026?",
+    "ticker": "XOM",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "momentum_7",
+      "n_features": 7,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.5424,
+      "Sharpe": 5.205,
+      "Top Feature": "mom_return_1d",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.5424 on XOM using 7 features. Top feature: mom_return_1d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "momentum_7",
+      "xom"
+    ]
+  },
+  {
+    "id": "EXP-4A1B39",
+    "timestamp": "2026-06-28T22:26:12.124901",
+    "hypothesis": "Does the top5_selected feature set show predictive edge on XOM over the test period 2024-2026?",
+    "ticker": "XOM",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "top5_selected",
+      "n_features": 5,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "trend_dist_sma50",
+      "vol_volume_momentum",
+      "mom_return_60d",
+      "mom_return_10d",
+      "mom_return_20d"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.5107,
+      "Sharpe": -1.524,
+      "Top Feature": "trend_dist_sma50",
+      "Train Rows": 693,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.5107 on XOM using 5 features. Top feature: trend_dist_sma50.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "top5_selected",
+      "xom"
+    ]
+  },
+  {
+    "id": "EXP-5854C2",
+    "timestamp": "2026-06-28T22:26:12.125573",
+    "hypothesis": "Does the full_27 feature set show predictive edge on XOM over the test period 2024-2026?",
+    "ticker": "XOM",
+    "start": "2021-01-01",
+    "end": "2026-06-01",
+    "strategy": "ML_RandomForest",
+    "parameters": {
+      "feature_set": "full_27",
+      "n_features": 27,
+      "split_date": "2024-01-01",
+      "n_estimators": 100,
+      "prob_threshold": 0.55
+    },
+    "features": [
+      "mom_return_1d",
+      "mom_return_5d",
+      "mom_return_10d",
+      "mom_return_20d",
+      "mom_return_60d",
+      "mom_zscore_20d",
+      "mom_rsi_14",
+      "vol_atr_14",
+      "vol_atr_pct",
+      "vol_realized_10d",
+      "vol_realized_20d",
+      "vol_rank_52w",
+      "vol_ratio",
+      "trend_dist_sma20",
+      "trend_dist_sma50",
+      "trend_dist_sma200",
+      "trend_dist_ema20",
+      "trend_sma20_slope",
+      "trend_above_sma200",
+      "vol_relative_volume",
+      "vol_volume_spike",
+      "vol_price_volume_trend",
+      "vol_volume_momentum",
+      "regime_bull_bear",
+      "regime_volatility_state",
+      "regime_trend_strength",
+      "regime_drawdown_pct"
+    ],
+    "metrics": {
+      "ROC-AUC": 0.5061,
+      "Sharpe": 1.889,
+      "Top Feature": "mom_return_1d",
+      "Train Rows": 482,
+      "Test Rows": 604
+    },
+    "conclusion": "ROC-AUC 0.5061 on XOM using 27 features. Top feature: mom_return_1d.",
+    "tags": [
+      "ml",
+      "cross-ticker-validation",
+      "full_27",
+      "xom"
+    ]
   }
 ]
